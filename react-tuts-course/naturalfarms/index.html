@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Farms</title>
+</head>
+<body>
+
+    <div id="root">
+
+    </div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- <script>
+
+        let root = document.getElementById("root");
+
+        console.log(root);
+
+        let h1Tag = document.createElement("h1");
+
+        h1Tag.innerHTML = "Natural Farms";
+
+        console.log(h1Tag);
+
+        root.appendChild(h1Tag);
+
+    </script> -->
+
+    <!-- Write the Custom JS Code After the React, ReactDOM Dependencies -->
+
+    <script type="text/babel">
+
+        /*
+
+        function Header() {
+            return (
+                <h1>Natural Farms Heading Tag.</h1>
+            )
+        }
+
+        function Home() {
+            return (
+                <div>
+                    <h1>Top 3 Movies</h1>
+                    <Movie name="Okkadu" hero="Mahesh" heroine="Boomika" />
+                    <Movie name="Kalki" hero="Prabhas" heroine="Deepka" />
+                    <Movie name="Bhima" hero="Gopichand" heroine="Malvika" />
+                </div>
+            )
+        }
+
+        function Movie(props) { // 1. { name: 'Okkadu', hero: 'Mahesh', heroine: "Boomika" } 2. { name: 'Kalki', hero: 'Prabhas', heroine: "Deepika" } 3. { name: 'Bheem', hero: 'Gopichand', heroine: "Malvika" }
+            return (
+                <p>
+                    <b>Movie Name :</b> {props.name} | <b>Hero Name :</b> {props.hero} | <b>Heroine Name :</b> {props.heroine}
+                </p>
+            )
+        }
+
+        function Footer() {
+            return (
+                <h2>Natural Farms Footer Tag.</h2>
+            )
+        }
+
+        function AppLayout() {
+            return (
+                <>
+                  <Header />
+                  
+                  <Home />
+
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, sit facere sapiente illo perspiciatis beatae porro minus, dolorum ratione possimus ut vel explicabo doloribus natus repellendus dolorem, consequuntur nobis aliquam? Cumque labore aliquam commodi incidunt harum nisi doloribus natus fugit porro, eveniet culpa sapiente nemo molestias autem consequuntur. Voluptas, quidem.</p>
+                  
+                  <Footer />
+                </>
+            )
+        }
+
+        function Child({name, cars}) { // Props Destructuring like {name, age, cars}
+            // const {name, cars} = props;
+            // console.log(props);
+            // props.age = 20; // It is read-only property child component cannot change the age property.
+            return <div>
+                <h2> Child Name = {name} </h2>
+                <h2> Child Cars = {cars} </h2>
+            </div>
+        }
+
+        function Father() {
+            return <div>
+                <h1>Bommarillu Father</h1>
+                <Child age="30" cars='3' name='siddhu' />
+            </div>
+        }
+
+        */
+
+
+
+        function Student01({name, age, prac}) {
+
+            if (prac) {
+                return <div>
+                    <h1>Hello I am {name}. I am {age} years old !</h1>
+                    {/* <h1>{`I am ${name}. I am ${age} years old !`}</h1> */}
+                </div>
+            } else {
+                return <div>
+                    <h1>Hello I am {name}. Please do more Practice</h1>
+                </div>
+            }
+
+        }
+
+
+
+
+        function Student({name, age, prac}) {
+
+            return <div>
+                {
+                    prac ? <h1>Hello {name} You got the job.</h1> : <h1>Hello {name} Please do practice.</h1>
+                }
+            </div>
+
+        }
+
+
+        function College() {
+            let studs = ["Rohit", "Virat", "Pant"];
+            return <div>
+                
+                {/*
+                
+                <Student name={studs[0]} age={35} prac={true} />
+                <Student name={studs[1]} age={32} prac={false} />
+                <Student name={studs[2]} age={26} prac={true} />
+                    
+                */}
+
+                {
+                    studs.map((stud) => <Student name={stud} age={32} prac={true} />)
+                }
+
+            </div>
+        }
+
+        function Button({ name }) {
+            return (
+                <button style={{margin: "20px", backgroundColor: "green", border:"none", outline:"none", padding:"10px", borderRadius: "10px", color: "white"}}>{name}</button>
+            )
+        }
+
+        function Main() {
+            const btns = ["Primary", "Secondary", "Warning"];
+            return (
+                <>
+                {
+                    btns.map((btn, idx) => <Button key={idx} name={btn} />)
+                }
+                </>
+            )
+        }
+
+
+
+        // let app = document.getElementById("root");
+
+        // let root = ReactDOM.createRoot(app);
+
+        // root.render(<h1>Natural Farms</h1>); // Initial render
+
+        // root.render(<h1>Welcome to React JS</h1>); // Initial render
+
+        // root.render(<Header />); // Initial render
+
+        // root.render(<AppLayout />); // Initial render
+
+        // root.render(<Father />);
+
+        // root.render(<College />);
+
+        // root.render(<Main />);
+
+    </script>
+
+    <script type="text/jsx" src="./main.js"></script>
+
+    
+
+</body>
+</html>
