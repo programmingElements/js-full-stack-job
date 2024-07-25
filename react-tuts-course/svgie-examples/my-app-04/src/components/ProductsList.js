@@ -11,11 +11,25 @@ export default function ProductsList() {
     // });
 
     useEffect(() => {
-        console.log("useEffect Hook...")
+        console.log("component did mount");
+
+        return () => {
+              // cleanup activities
+            console.log("component will unmount");
+        }
+    }, [])
+
+    useEffect(() => {
+        console.log("component did update");
+
+        return () => {
+            // cleanup operations
+            console.log("update component will unmount");
+        }
     }, [count])
 
     const handleClick = () => {
-        setCount(8);
+        setCount(count + 1);
     }
 
     return (
@@ -29,8 +43,6 @@ export default function ProductsList() {
                     <img src={prod.image} alt="Image" width={"300px"} height={"300px"} />
                 </div>)
             } */}
-
-            
         </div>
     )
 }

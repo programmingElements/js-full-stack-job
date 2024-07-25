@@ -198,7 +198,53 @@ A React JS Course Tutorials By Chakravarthi
        Before leaving company - Unmounting - componentWillUnmount()
 
        useEffect() -> Perform SideEffects
+ 
+  * Day - 10 [Official Diagram : https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/]
 
+      🔥 What is Initial Render ? ✅
+      🔥 Triggering a render ? [https://react.dev/learn/adding-interactivity]
+      🔥 Rendering the component (Re-render) ? [https://react.dev/learn/adding-interactivity]
+      🔥 What is Committing to the DOM ? [https://react.dev/learn/adding-interactivity]
+      🔥 Virtual DOM ?
+      🔥 Diffing algorithm 
+      🔥 Reconciliation algorithm
+      🔥 useEffect Hook vs useLayoutEffect
+
+       - componentDidMount
+       - componentDidUpdate
+       - componentWillUnmount
+
+       What is Initial Render ?
+
+         First initial render time,web app loads Component Tree into index.html through render() function is called Initial Render. 
+
+         At the First Time, Component Tree/DOM Tree Loads into the index.html through render() function is called as Initial Render.
+      
+       useEffect Hook vs useLayoutEffect
+
+         useEffect() is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+
+         useLayoutEffect is a version of useEffect that fires before the browser repaints the screen.
+
+         Call useLayoutEffect to perform the layout measurements before the browser repaints the screen.
+
+         componentWillUnmount/useEffect() with return callback Fn is executed before the component is unmounted from the web app. it is performed to achieve cleanup operations/activities. 
+
+       What is rendering ?
+
+          rendering is a calling a component
+
+       
+  * Day - 11
+
+      Context API 
+
+        useContext Hook
+
+        Redux
+
+      
+       
        
 
 
