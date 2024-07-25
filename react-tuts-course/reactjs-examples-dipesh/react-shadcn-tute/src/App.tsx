@@ -1,11 +1,13 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import { SkeletonCard } from '@/components/skeletonCard';
+import { Button } from './components/ui/button';
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
+} from "@/components/ui/input-otp";
+import { SearchBar } from './components/searchBar';
 
 
 function App() {
@@ -51,6 +53,12 @@ function App() {
     <InputOTPSlot index={5} />
   </InputOTPGroup>
 </InputOTP>
+    </div>
+    <div className='mb-5'>
+      <SkeletonCard />
+    </div>
+    <div className='mb-5'>
+      <SearchBar />
     </div>
     </>
   )
